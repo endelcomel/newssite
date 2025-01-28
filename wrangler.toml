@@ -1,0 +1,21 @@
+name = "news-site"
+type = "webpack"
+account_id = "your-account-id"
+workers_dev = true
+route = ""
+zone_id = ""
+compatibility_date = "2023-05-18"
+
+[site]
+bucket = "./out"
+entry-point = "workers-site"
+
+[build]
+command = "npm run build"
+[build.upload]
+format = "service-worker"
+
+[[r2_buckets]]
+binding = "MY_BUCKET"
+bucket_name = "your-r2-bucket-name"
+
